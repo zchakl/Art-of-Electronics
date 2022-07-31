@@ -1,0 +1,185 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L pspice:OPAMP U1
+U 1 1 5EF959DC
+P 3700 2200
+F 0 "U1" H 4044 2246 50  0000 L CNN
+F 1 "OPAMP" H 4044 2155 50  0000 L CNN
+F 2 "" H 3700 2200 50  0001 C CNN
+F 3 "~" H 3700 2200 50  0001 C CNN
+F 4 "X" H 3700 2200 50  0001 C CNN "Spice_Primitive"
+F 5 "LM741" H 3700 2200 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3700 2200 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "C:\\Cadence\\SPB_17.2\\tools\\pspice\\library\\opamp.lib" H 3700 2200 50  0001 C CNN "Spice_Lib_File"
+	1    3700 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Simulation_SPICE:VDC V1
+U 1 1 5EF960D9
+P 3600 1600
+F 0 "V1" H 3470 1509 50  0000 R CNN
+F 1 "VDC" H 3470 1600 50  0000 R CNN
+F 2 "" H 3600 1600 50  0001 C CNN
+F 3 "~" H 3600 1600 50  0001 C CNN
+F 4 "Y" H 3600 1600 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "V" H 3600 1600 50  0001 L CNN "Spice_Primitive"
+F 6 "dc(5)" H 3470 1691 50  0000 R CNN "Spice_Model"
+	1    3600 1600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Simulation_SPICE:VDC V2
+U 1 1 5EF96E33
+P 3600 2800
+F 0 "V2" H 3730 2891 50  0000 L CNN
+F 1 "VDC" H 3730 2800 50  0000 L CNN
+F 2 "" H 3600 2800 50  0001 C CNN
+F 3 "~" H 3600 2800 50  0001 C CNN
+F 4 "Y" H 3600 2800 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "V" H 3600 2800 50  0001 L CNN "Spice_Primitive"
+F 6 "dc(-5)" H 3730 2709 50  0000 L CNN "Spice_Model"
+	1    3600 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND04
+U 1 1 5EF9830C
+P 3800 1400
+F 0 "#GND04" H 3800 1300 50  0001 C CNN
+F 1 "0" H 3800 1489 50  0000 C CNN
+F 2 "" H 3800 1400 50  0001 C CNN
+F 3 "~" H 3800 1400 50  0001 C CNN
+	1    3800 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND03
+U 1 1 5EF98619
+P 3600 3200
+F 0 "#GND03" H 3600 3100 50  0001 C CNN
+F 1 "0" H 3600 3289 50  0000 C CNN
+F 2 "" H 3600 3200 50  0001 C CNN
+F 3 "~" H 3600 3200 50  0001 C CNN
+	1    3600 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 3200 3600 3000
+Wire Wire Line
+	3600 2600 3600 2500
+Wire Wire Line
+	3600 1900 3600 1800
+Wire Wire Line
+	3600 1400 3600 1200
+Wire Wire Line
+	3600 1200 3800 1200
+Wire Wire Line
+	3800 1200 3800 1400
+$Comp
+L Device:R R2
+U 1 1 5EF98DE8
+P 3400 3400
+F 0 "R2" V 3193 3400 50  0000 C CNN
+F 1 "5k" V 3284 3400 50  0000 C CNN
+F 2 "" V 3330 3400 50  0001 C CNN
+F 3 "~" H 3400 3400 50  0001 C CNN
+	1    3400 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5EF9965E
+P 2900 2300
+F 0 "R1" V 2693 2300 50  0000 C CNN
+F 1 "1k" V 2784 2300 50  0000 C CNN
+F 2 "" V 2830 2300 50  0001 C CNN
+F 3 "~" H 2900 2300 50  0001 C CNN
+	1    2900 2300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3250 3400 3200 3400
+Wire Wire Line
+	3200 3400 3200 2300
+Wire Wire Line
+	3200 2300 3400 2300
+Wire Wire Line
+	3200 2300 3050 2300
+Connection ~ 3200 2300
+Wire Wire Line
+	3550 3400 4350 3400
+Wire Wire Line
+	4350 3400 4350 2200
+Wire Wire Line
+	4350 2200 4000 2200
+Text GLabel 4500 2200 2    50   Input ~ 0
+out
+Text GLabel 2500 2300 0    50   Input ~ 0
+in
+Wire Wire Line
+	2500 2300 2600 2300
+Wire Wire Line
+	4350 2200 4500 2200
+Connection ~ 4350 2200
+$Comp
+L pspice:VSOURCE Vin
+U 1 1 5EF9A6E5
+P 2600 2800
+F 0 "Vin" H 2828 2846 50  0000 L CNN
+F 1 "dc 0 ac 1" H 2828 2755 50  0000 L CNN
+F 2 "" H 2600 2800 50  0001 C CNN
+F 3 "~" H 2600 2800 50  0001 C CNN
+	1    2600 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND02
+U 1 1 5EF9B239
+P 3300 2150
+F 0 "#GND02" H 3300 2050 50  0001 C CNN
+F 1 "0" H 3300 2239 50  0000 C CNN
+F 2 "" H 3300 2150 50  0001 C CNN
+F 3 "~" H 3300 2150 50  0001 C CNN
+	1    3300 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND01
+U 1 1 5EF9B803
+P 2600 3250
+F 0 "#GND01" H 2600 3150 50  0001 C CNN
+F 1 "0" H 2600 3339 50  0000 C CNN
+F 2 "" H 2600 3250 50  0001 C CNN
+F 3 "~" H 2600 3250 50  0001 C CNN
+	1    2600 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 3100 2600 3250
+Wire Wire Line
+	2600 2500 2600 2300
+Connection ~ 2600 2300
+Wire Wire Line
+	2600 2300 2750 2300
+Text Notes 4850 2650 0    50   ~ 0
+.ac dec 10 100 1000k
+Wire Wire Line
+	3300 2150 3300 2100
+Wire Wire Line
+	3300 2100 3400 2100
+$EndSCHEMATC

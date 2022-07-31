@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "High-Pass-Filter-rescue")(type "Legacy")(uri "${KIPRJMOD}/High Pass Filter-rescue.lib")(options "")(descr ""))
+)

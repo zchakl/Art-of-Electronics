@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "MOSFET-rescue")(type "Legacy")(uri "${KIPRJMOD}/MOSFET-rescue.lib")(options "")(descr ""))
+)

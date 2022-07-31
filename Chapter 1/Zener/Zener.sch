@@ -1,0 +1,85 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L pspice:VSOURCE V1
+U 1 1 5ECFD521
+P 2000 1800
+F 0 "V1" H 2228 1846 50  0000 L CNN
+F 1 "dc 0" H 2228 1755 50  0000 L CNN
+F 2 "" H 2000 1800 50  0001 C CNN
+F 3 "~" H 2000 1800 50  0001 C CNN
+	1    2000 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5ECFD9B7
+P 2450 1400
+F 0 "R1" V 2243 1400 50  0000 C CNN
+F 1 "10k" V 2334 1400 50  0000 C CNN
+F 2 "" V 2380 1400 50  0001 C CNN
+F 3 "~" H 2450 1400 50  0001 C CNN
+	1    2450 1400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2000 1500 2000 1400
+Wire Wire Line
+	2000 1400 2300 1400
+Wire Wire Line
+	2600 1400 2900 1400
+Wire Wire Line
+	2000 2100 2000 2200
+Wire Wire Line
+	2000 2200 2500 2200
+Wire Wire Line
+	2900 2200 2900 1850
+$Comp
+L pspice:0 #GND01
+U 1 1 5ED005D0
+P 2500 2500
+F 0 "#GND01" H 2500 2400 50  0001 C CNN
+F 1 "0" H 2500 2589 50  0000 C CNN
+F 2 "" H 2500 2500 50  0001 C CNN
+F 3 "~" H 2500 2500 50  0001 C CNN
+	1    2500 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 2500 2500 2200
+Connection ~ 2500 2200
+Wire Wire Line
+	2500 2200 2900 2200
+Text Notes 2700 1000 0    50   ~ 0
+.dc V1 -100 5 1
+$Comp
+L pspice:DIODE D1
+U 1 1 5ED01562
+P 2900 1650
+F 0 "D1" V 2854 1778 50  0000 L CNN
+F 1 "DIODE" V 2945 1778 50  0000 L CNN
+F 2 "" H 2900 1650 50  0001 C CNN
+F 3 "~" H 2900 1650 50  0001 C CNN
+F 4 "D" H 2900 1650 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4001" H 2900 1650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2900 1650 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "C:\\Cadence\\SPB_17.2\\tools\\pspice\\library\\diode.lib" H 2900 1650 50  0001 C CNN "Spice_Lib_File"
+	1    2900 1650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2900 1450 2900 1400
+$EndSCHEMATC

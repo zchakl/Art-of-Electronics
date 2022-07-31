@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "Pulse-Generator-rescue")(type "Legacy")(uri "${KIPRJMOD}/Pulse Generator-rescue.lib")(options "")(descr ""))
+)

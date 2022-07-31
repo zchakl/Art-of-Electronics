@@ -1,0 +1,212 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R1
+U 1 1 5EF7DD5F
+P 2500 1150
+F 0 "R1" H 2570 1196 50  0000 L CNN
+F 1 "150k" H 2570 1105 50  0000 L CNN
+F 2 "" V 2430 1150 50  0001 C CNN
+F 3 "~" H 2500 1150 50  0001 C CNN
+	1    2500 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5EF7E277
+P 3500 1150
+F 0 "R3" H 3570 1196 50  0000 L CNN
+F 1 "4.99k" H 3570 1105 50  0000 L CNN
+F 2 "" V 3430 1150 50  0001 C CNN
+F 3 "~" H 3500 1150 50  0001 C CNN
+	1    3500 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5EF7E33D
+P 3500 2500
+F 0 "R4" H 3570 2546 50  0000 L CNN
+F 1 "4.99k" H 3570 2455 50  0000 L CNN
+F 2 "" V 3430 2500 50  0001 C CNN
+F 3 "~" H 3500 2500 50  0001 C CNN
+	1    3500 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5EF7E413
+P 2500 2500
+F 0 "R2" H 2570 2546 50  0000 L CNN
+F 1 "62k" H 2570 2455 50  0000 L CNN
+F 2 "" V 2430 2500 50  0001 C CNN
+F 3 "~" H 2500 2500 50  0001 C CNN
+	1    2500 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND03
+U 1 1 5EF7E5A1
+P 2500 2800
+F 0 "#GND03" H 2500 2700 50  0001 C CNN
+F 1 "0" H 2500 2889 50  0000 C CNN
+F 2 "" H 2500 2800 50  0001 C CNN
+F 3 "~" H 2500 2800 50  0001 C CNN
+	1    2500 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND04
+U 1 1 5EF7E67D
+P 3500 2800
+F 0 "#GND04" H 3500 2700 50  0001 C CNN
+F 1 "0" H 3500 2889 50  0000 C CNN
+F 2 "" H 3500 2800 50  0001 C CNN
+F 3 "~" H 3500 2800 50  0001 C CNN
+	1    3500 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:QNPN Q1
+U 1 1 5EF7E7C4
+P 3350 1800
+F 0 "Q1" H 3577 1846 50  0000 L CNN
+F 1 "QNPN" H 3577 1755 50  0000 L CNN
+F 2 "" H 3350 1800 50  0001 C CNN
+F 3 "~" H 3350 1800 50  0001 C CNN
+	1    3350 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5EF7E9FE
+P 2150 1500
+F 0 "C1" V 1898 1500 50  0000 C CNN
+F 1 "1u" V 1989 1500 50  0000 C CNN
+F 2 "" H 2188 1350 50  0001 C CNN
+F 3 "~" H 2150 1500 50  0001 C CNN
+	1    2150 1500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2300 1500 2500 1500
+Wire Wire Line
+	2500 1500 2500 1300
+Wire Wire Line
+	2500 1500 2500 1800
+Wire Wire Line
+	2500 1800 3050 1800
+Connection ~ 2500 1500
+Wire Wire Line
+	2500 1800 2500 2350
+Connection ~ 2500 1800
+Wire Wire Line
+	2500 2650 2500 2800
+Wire Wire Line
+	3500 2800 3500 2650
+Wire Wire Line
+	3500 2350 3500 2250
+Wire Wire Line
+	3500 2150 3250 2150
+Connection ~ 3500 2150
+Wire Wire Line
+	3500 1450 3500 1350
+Wire Wire Line
+	3500 1350 4000 1350
+Connection ~ 3500 1350
+Wire Wire Line
+	3500 1350 3500 1300
+$Comp
+L Simulation_SPICE:VDC V1
+U 1 1 5EF7F803
+P 1300 1050
+F 0 "V1" H 1430 1141 50  0000 L CNN
+F 1 "VDC" H 1430 1050 50  0000 L CNN
+F 2 "" H 1300 1050 50  0001 C CNN
+F 3 "~" H 1300 1050 50  0001 C CNN
+F 4 "Y" H 1300 1050 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "V" H 1300 1050 50  0001 L CNN "Spice_Primitive"
+F 6 "dc(20)" H 1430 959 50  0000 L CNN "Spice_Model"
+	1    1300 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Simulation_SPICE:VSIN V2
+U 1 1 5EF80C69
+P 1650 1750
+F 0 "V2" H 1780 1841 50  0000 L CNN
+F 1 "VSIN" H 1780 1750 50  0000 L CNN
+F 2 "" H 1650 1750 50  0001 C CNN
+F 3 "~" H 1650 1750 50  0001 C CNN
+F 4 "Y" H 1650 1750 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "V" H 1650 1750 50  0001 L CNN "Spice_Primitive"
+F 6 "sin(10 5 1k)" H 1780 1659 50  0000 L CNN "Spice_Model"
+	1    1650 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND02
+U 1 1 5EF810AD
+P 1650 2100
+F 0 "#GND02" H 1650 2000 50  0001 C CNN
+F 1 "0" H 1650 2189 50  0000 C CNN
+F 2 "" H 1650 2100 50  0001 C CNN
+F 3 "~" H 1650 2100 50  0001 C CNN
+	1    1650 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND01
+U 1 1 5EF811E3
+P 1300 1350
+F 0 "#GND01" H 1300 1250 50  0001 C CNN
+F 1 "0" H 1300 1439 50  0000 C CNN
+F 2 "" H 1300 1350 50  0001 C CNN
+F 3 "~" H 1300 1350 50  0001 C CNN
+	1    1300 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 1350 1300 1250
+Wire Wire Line
+	1300 850  2500 850 
+Wire Wire Line
+	3500 850  3500 1000
+Wire Wire Line
+	2500 1000 2500 850 
+Connection ~ 2500 850 
+Wire Wire Line
+	2500 850  3500 850 
+Wire Wire Line
+	1650 2100 1650 1950
+Wire Wire Line
+	1650 1550 1650 1500
+Wire Wire Line
+	1650 1500 2000 1500
+Text Label 3900 1350 0    50   ~ 0
+Vinv
+Wire Wire Line
+	3500 2250 4000 2250
+Connection ~ 3500 2250
+Wire Wire Line
+	3500 2250 3500 2150
+Text Label 3900 2250 0    50   ~ 0
+Vorg
+Text Label 1750 1500 0    50   ~ 0
+vin
+Text Notes 4500 1000 0    50   ~ 0
+.model QNPN npn\n.tran 10u 2000u\n\n
+$EndSCHEMATC
